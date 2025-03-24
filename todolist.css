@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 10px;
+}
+
+.to-do-app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px auto;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.to-do-app h2 {
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.to-do-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f4f4f4;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #6a11cb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #ff0000;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+li span:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+li.checked {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+li.checked::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url('check.png') no-repeat center center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url('uncheck.png') no-repeat center center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
